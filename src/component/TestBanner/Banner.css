@@ -1,0 +1,8 @@
+/* Short Thumb */
+.short-thumb {
+  cursor: pointer;
+  margin-right: 15px;
+}
+.short-thumb img {
+  width: 75px;
+}
