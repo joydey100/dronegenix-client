@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import SingleDrone from "./SingleDrone";
 
 const DroneList = () => {
+  // States Declaration
   const [drones, setDrones] = useState([]);
 
   // Getting Drone List

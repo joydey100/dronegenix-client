@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Swal from "sweetalert2";
 
 const AddProduct = () => {
+  // Initial States
   const [newDrone, setNewDrone] = useState({
     name: "",
     desc: "",
@@ -10,6 +11,7 @@ const AddProduct = () => {
     price: " ",
   });
 
+  // Post or adding new Products
   const addProduct = (e) => {
     e.preventDefault();
 

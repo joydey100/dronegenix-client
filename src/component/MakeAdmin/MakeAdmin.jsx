@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 
 const MakeAdmin = () => {
+  // Initial States
   const [email, setEmail] = useState("");
   const { error, setError } = useAuth();
 

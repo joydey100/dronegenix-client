@@ -28,6 +28,7 @@ const useStyles = makeStyles({
 });
 
 const Header = () => {
+  // Important State Declare
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const matches = useMediaQuery("(max-width:900px)");
   const { logOut, user } = useAuth();

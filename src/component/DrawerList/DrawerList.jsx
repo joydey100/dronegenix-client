@@ -18,6 +18,7 @@ import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 
 const DrawerList = () => {
+  // Initial States and important routes
   const { logOut, admin } = useAuth();
   const { url } = useRouteMatch();
 
