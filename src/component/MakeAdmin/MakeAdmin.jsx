@@ -15,7 +15,7 @@ const MakeAdmin = () => {
     e.preventDefault();
     setError("");
 
-    fetch(`http://localhost:5000/users/admin`, {
+    fetch(`https://sheltered-waters-81006.herokuapp.com/users/admin`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

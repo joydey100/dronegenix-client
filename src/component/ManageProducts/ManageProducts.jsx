@@ -8,7 +8,7 @@ const ManageProducts = () => {
   const [drones, setDrones] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/dronelist`)
+    fetch(`https://sheltered-waters-81006.herokuapp.com/dronelist`)
       .then((res) => res.json())
       .then((data) => setDrones(data));
   });
@@ -24,7 +24,7 @@ const ManageProducts = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/dronelist/${id}`, {
+        fetch(`https://sheltered-waters-81006.herokuapp.com/dronelist/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

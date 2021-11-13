@@ -9,7 +9,7 @@ const Review = () => {
 
   // Getting review data
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://sheltered-waters-81006.herokuapp.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

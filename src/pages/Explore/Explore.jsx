@@ -10,7 +10,7 @@ const Explore = () => {
 
   // Getting Drone List
   useEffect(() => {
-    fetch("http://localhost:5000/dronelist")
+    fetch("https://sheltered-waters-81006.herokuapp.com/dronelist")
       .then((res) => res.json())
       .then((data) => setDrones(data));
   }, []);

@@ -29,7 +29,7 @@ const NewReview = () => {
     };
 
     // post review
-    fetch(`http://localhost:5000/reviews`, {
+    fetch(`https://sheltered-waters-81006.herokuapp.com/reviews`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -15,7 +15,7 @@ const ManageOrders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders`)
+    fetch(`https://sheltered-waters-81006.herokuapp.com/orders`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   });
@@ -35,7 +35,7 @@ const ManageOrders = () => {
       confirmButtonText: "Yes, Approve it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://sheltered-waters-81006.herokuapp.com/order/${id}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",
@@ -62,7 +62,7 @@ const ManageOrders = () => {
       confirmButtonText: "Yes, Delete  it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://sheltered-waters-81006.herokuapp.com/order/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -119,7 +119,7 @@ const ManageOrders = () => {
           }}
         >
           <Typography variant="h6" color="error">
-             There is no Orders!
+            There is no Orders!
           </Typography>
         </Box>
       )}

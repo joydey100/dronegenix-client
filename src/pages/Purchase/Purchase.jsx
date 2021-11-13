@@ -15,7 +15,7 @@ const Purchase = () => {
 
   //   get Specific proudct info
   useEffect(() => {
-    fetch(`http://localhost:5000/drone/${id}`)
+    fetch(`https://sheltered-waters-81006.herokuapp.com/drone/${id}`)
       .then((res) => res.json())
       .then((data) => setDrone(data));
   }, [id]);
@@ -36,7 +36,7 @@ const Purchase = () => {
     };
 
     // posting order
-    fetch("http://localhost:5000/orders", {
+    fetch("https://sheltered-waters-81006.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

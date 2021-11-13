@@ -16,7 +16,7 @@ const AddProduct = () => {
     const droneInfo = { ...newDrone };
 
     // Posting New Drone
-    fetch("http://localhost:5000/dronelist", {
+    fetch("https://sheltered-waters-81006.herokuapp.com/dronelist", {
       method: "POST",
       headers: {
         "content-type": "application/json",
