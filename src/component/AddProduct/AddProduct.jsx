@@ -8,7 +8,7 @@ const AddProduct = () => {
     name: "",
     desc: "",
     img: "",
-    price: " ",
+    price: "",
   });
 
   // Post or adding new Products

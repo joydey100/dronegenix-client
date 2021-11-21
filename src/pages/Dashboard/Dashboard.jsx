@@ -19,6 +19,7 @@ import AddProduct from "../../component/AddProduct/AddProduct";
 import MakeAdmin from "../../component/MakeAdmin/MakeAdmin";
 import ManageProducts from "../../component/ManageProducts/ManageProducts";
 import DrawerList from "../../component/DrawerList/DrawerList";
+import AdminRoute from "../../AdminRoute/AdminRoute";
 
 const drawerWidth = 280;
 
@@ -147,18 +148,18 @@ function Dashboard(props) {
           <Route path={`${path}/review`}>
             <NewReview />
           </Route>
-          <Route path={`${path}/manage-orders`}>
+          <AdminRoute path={`${path}/manage-orders`}>
             <ManageOrders />
-          </Route>
-          <Route path={`${path}/add-product`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/add-product`}>
             <AddProduct />
-          </Route>
-          <Route path={`${path}/make-admin`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/make-admin`}>
             <MakeAdmin />
-          </Route>
-          <Route path={`${path}/manage-products`}>
+          </AdminRoute>
+          <AdminRoute path={`${path}/manage-products`}>
             <ManageProducts />
-          </Route>
+          </AdminRoute>
         </Switch>
       </Box>
     </Box>

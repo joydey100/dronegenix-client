@@ -15,10 +15,12 @@ const ManageOrders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`https://sheltered-waters-81006.herokuapp.com/orders`)
+    const order = fetch(`https://sheltered-waters-81006.herokuapp.com/orders`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  });
+
+    return () => order;
+  }, []);
 
   const confirmOrder = (id) => {
     const getOrder = orders.find((order) => order._id === id);

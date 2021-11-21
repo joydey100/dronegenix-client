@@ -9,6 +9,7 @@ import PurchaseHome from "./pages/Purchase/PurchaseHome";
 import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "../src/PrivateRoute/PrivateRoute";
 import Dashboard from "../src/pages/Dashboard/Dashboard";
+import ErrorPage from "./component/ErrorPage/ErrorPage";
 
 // Some Theme Changes
 const theme = createTheme({
@@ -46,6 +47,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
+            <Route exact path="*">
+              <ErrorPage />
+            </Route>
           </Switch>
         </Router>
       </ThemeProvider>

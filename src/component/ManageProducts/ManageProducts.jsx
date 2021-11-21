@@ -8,10 +8,14 @@ const ManageProducts = () => {
   const [drones, setDrones] = useState([]);
 
   useEffect(() => {
-    fetch(`https://sheltered-waters-81006.herokuapp.com/dronelist`)
+    const product = fetch(
+      `https://sheltered-waters-81006.herokuapp.com/dronelist`
+    )
       .then((res) => res.json())
       .then((data) => setDrones(data));
-  });
+
+    return () => product;
+  }, []);
 
   const deleteDrone = (id) => {
     Swal.fire({

@@ -38,10 +38,12 @@ const useFirebase = () => {
   }
 
   useEffect(() => {
-    fetch(`https://sheltered-waters-81006.herokuapp.com/users/${user.email}`)
-      .then((res) => res.json())
-      .then((data) => setAdmin(data.admin));
-  }, [user.email]);
+    if (user.email) {
+      fetch(`https://sheltered-waters-81006.herokuapp.com/users/${user?.email}`)
+        .then((res) => res.json())
+        .then((data) => setAdmin(data.admin));
+    }
+  }, [user?.email]);
 
   // remaining User
   useEffect(() => {
